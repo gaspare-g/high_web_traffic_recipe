@@ -198,20 +198,20 @@ Binned means analysis reveals non-linear relationships in:
 
 ### Key Findings
 
-✅ **Logistic Regression is the Recommended Model**
+✅ **Logistic Regression is the Recommended Model**  
 - Higher precision (0.817 vs 0.792)
 - Higher recall (0.812 vs 0.781)
 - No overfitting (test ≈ train metrics)
 - Simpler, more interpretable
 
-⚠️ **Random Forest Results**
+⚠️ **Random Forest Results**  
 - Slightly lower performance across all metrics
 - Moderate overfitting detected (train metrics > test metrics)
 - Non-linear patterns not substantial enough to warrant complexity
 
 ### Confusion Matrix Analysis
 
-**Logistic Regression Test Set**:
+**Logistic Regression Test Set**:  
 - True Positives: 121 (correctly identified high-traffic recipes)
 - True Negatives: 97 (correctly identified low-traffic recipes)
 - False Positives: 27 (falsely predicted as high-traffic)
@@ -245,15 +245,15 @@ Expected Traffic Increase = 40% × (Model Precision - Baseline Precision)
 
 ### Key Performance Indicators (KPIs) to Monitor
 
-1. **Model Metrics**
+1. **Model Metrics**  
    - Precision: Maintain ≥ 80% (proportion of true high-traffic predictions)
    - Recall: Maintain ≥ 80% (coverage of actual high-traffic recipes)
 
-2. **Business Metrics**
+2. **Business Metrics**  
    - Monthly web traffic increase (target: +8.44%)
    - Model coefficient changes (recipe category preferences may shift)
 
-3. **Category Insights**
+3. **Category Insights**  
    - **Strong Predictors of High Traffic**: Pork, Potato, Vegetable
    - **Weak Predictors**: Beverages, Breakfast, Chicken
 
@@ -263,34 +263,34 @@ Expected Traffic Increase = 40% × (Model Precision - Baseline Precision)
 
 ### Immediate Actions
 
-1. **Deploy Logistic Regression Model**
+1. **Deploy Logistic Regression Model**  
    - Implement in production for homepage recipe selection
    - Use category-encoded feature set
    - Monitor model predictions weekly
 
-2. **Monitor Performance KPIs**
+2. **Monitor Performance KPIs**  
    - Track precision and recall monthly
    - Log actual web traffic metrics
    - Create alert if performance drops below 75%
 
-3. **Conduct A/B Testing**
+3. **Conduct A/B Testing**  
    - Test model-based selection vs human selection
    - Measure actual traffic impact
    - Validate business assumptions
 
-### Strategic Actions
+### Strategic Actions  
 
-4. **Analyze Category Trends**
+4. **Analyze Category Trends**  
    - Focus content development on Pork, Potato, Vegetable recipes
    - Investigate why Beverages, Breakfast, Chicken underperform
    - Consider user demographics and seasonal preferences
 
-5. **Continuous Improvement**
+5. **Continuous Improvement**  
    - Collect new labeled data quarterly
    - Retrain model if precision/recall degrades
    - Evaluate new features (cooking time, difficulty, etc.)
 
-6. **Model Governance**
+6. **Model Governance**  
    - Document all model changes in versioning system
    - Establish retraining schedule (quarterly recommended)
    - Create data quality checks for incoming recipes
@@ -353,17 +353,6 @@ All code is organized into reusable classes and modules:
 ## 📄 License
 
 This project is part of a DataCamp certification submission.
-
----
-
-## 👤 Author
-
-**Project**: Recipe High Traffic Classification  
-**Submission**: DataCamp Data Scientist Professional Practical Exam  
-**Result**: Successful
-
-
----
 
 ## 📞 Support
 
