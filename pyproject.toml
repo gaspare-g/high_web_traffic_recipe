@@ -1,0 +1,94 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "recipe_high_traffic_classification"
+version = "1.0.0"
+description = "Classification model to predict high-traffic recipes for DataCamp Data Scientist Certification"
+readme = "README.md"
+requires-python = ">=3.9, <3.13"
+license = {text = "MIT"}
+authors = [
+    {name = "Gaspare", email = "your.email@example.com"}
+]
+keywords = ["machine-learning", "classification", "recipes", "data-science"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Data Scientists",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
+
+dependencies = [
+    "pandas>=2.0.0",
+    "numpy>=1.24.0",
+    "scikit-learn>=1.3.0",
+    "scipy>=1.11.0",
+    "matplotlib>=3.7.0",
+    "seaborn>=0.12.0",
+    "jupyter>=1.0.0",
+    "jupyterlab>=4.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "pylint>=2.17.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/yourusername/recipe_high_traffic_classification"
+Documentation = "https://github.com/yourusername/recipe_high_traffic_classification#readme"
+Repository = "https://github.com/yourusername/recipe_high_traffic_classification.git"
+
+[tool.setuptools]
+packages = ["validation", "visualization", "model_development", "model_evaluation", "utils"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = [
+    "E",    # pycodestyle errors
+    "W",    # pycodestyle warnings
+    "F",    # Pyflakes
+    "I",    # isort
+    "C",    # flake8-comprehensions
+    "B",    # flake8-bugbear
+]
+ignore = [
+    "E501",  # Line too long (handled by black)
+]
+
+[tool.ruff.lint.isort]
+known-first-party = ["validation", "visualization", "model_development", "model_evaluation", "utils"]
+
+[tool.pylint.messages_control]
+disable = [
+    "C0330", "C0326",  # Hanging indent
+]
+
+[tool.pylint.format]
+max-line-length = 100
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+addopts = "--cov=validation --cov=visualization --cov=model_development --cov=model_evaluation --cov=utils --cov-report=html --cov-report=term-missing"
