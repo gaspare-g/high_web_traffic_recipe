@@ -12,10 +12,10 @@ The project demonstrates a complete end-to-end data science workflow: data valid
 
 ## View the Full Analysis
 
-[![Notebook](https://img.shields.io/badge/Jupyter-Notebook-blue?style=for-the-badge&logo=jupyter)](https://nbviewer.jupyter.org/github/gaspare-g/high_web_traffic_recipe/blob/main/notebook.ipynb)
+[![Notebook](https://img.shields.io/badge/Jupyter-Notebook-blue?style=for-the-badge&logo=jupyter)](https://nbviewer.jupyter.org/github/gaspare-g/high_web_traffic_recipe/blob/main/notebook.ipynb?flush_cache=true)
 
 Click the badge above or use this direct link:
-[View Full Notebook Analysis](https://nbviewer.jupyter.org/github/gaspare-g/high_web_traffic_recipe/blob/main/notebook.ipynb)
+[View Full Notebook Analysis](https://nbviewer.jupyter.org/github/gaspare-g/high_web_traffic_recipe/blob/main/notebook.ipynb?flush_cache=true)
 
 ## 📋 Table of Contents
 
